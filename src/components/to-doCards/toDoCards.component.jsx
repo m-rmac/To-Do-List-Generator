@@ -3,20 +3,21 @@ import React from "react";
 import "../to-doCards/toDoCards.style.css";
 import { Card } from "../card/card.component";
 
-export const ToDoCards = props => (
+export const ToDoCards = ({toDoList, onDelete}) => (
+
 
     <div className = "card-list">
-        
-      {/* {props.toDoList.map(toDo => (
-        <Card key={toDo.id} toDo ={toDo}/>
-        ))} */}
 
-        {props.toDoList.map(toDo => (
+        {toDoList.map(toDo => (
 
-          <Card key = {toDo.id} toDo = {toDo}/>
+          <Card key = {toDo.id} toDo = {toDo} onDelete={onDelete}>
+
+          </Card>
+          
+         
 
         ))}
-
+       
     </div>
 
 

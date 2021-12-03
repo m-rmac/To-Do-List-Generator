@@ -16,3 +16,12 @@
     transform: scale(1.05);
   }
   
+  .complete{
+    width: min-content;
+    float: right;
+  }
+
+  .delete{
+    width: min-content;
+    float: left;
+  }

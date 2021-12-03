@@ -12,4 +12,6 @@ export const SearchBox = ({placeholder, handleChange}) => (
     onChange={handleChange}
     />
 
+    
+
 )
