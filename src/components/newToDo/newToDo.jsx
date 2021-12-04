@@ -1,15 +1,20 @@
 import React from "react";
 
-export const NewToDo = ({placeholder, handleChange, onSubmit}) => (
+import '../newToDo/newToDo.css';
 
-    <form onSubmit={onSubmit}>
+export const NewToDo = ({placeholder, onSubmit, handleChange}) => (
+
+
+    <form>
         <input 
-        ref={_inputElement}
-        onChange={handleChange}
+        name= "newInput"
+        className="newItem" 
+        handleChange={handleChange}
+        type = "text"
         placeholder={placeholder}>
             
         </input>
-        <button type="submit"  className="submit"><i className = "fas fa-plus"></i></button>
+        <button type="button"  className="submit" onClick={onSubmit}><i className = "fas fa-plus"></i></button>
     </form>
 
 

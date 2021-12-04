@@ -1,12 +1,10 @@
-.search {
-    -webkit-appearance: none;
+.dropDown{
+    
     border: none;
     outline: none;
     padding: 10px;
-    width: 250px;
+    width: 200px;
     line-height: 30px;
     margin-bottom: 30px;
-
-    align-items: right;
-  }
-  
+    margin-left: 20px;
+}
