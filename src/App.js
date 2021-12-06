@@ -18,29 +18,25 @@ class App extends Component {
         {
           "id":1,
           "content": "Complete To-do list application",
-          "complete": "incomplete"
+          "complete": "completed",
+          "checkedStatus": true
         },
 
         {
           "id":2,
           "content": "File taxes",
-          "complete": "incomplete"
+          "complete": "incomplete",
+          "checkedStatus": false
         }
       ],
 
       searchField: '',
 
-      filteredToDo: [],
-
       completeStatus: "all"
     }
     
-    // this.deleteTodo = this.deleteTodo.bind(this);
+   
     this.addItem = this.addItem.bind(this);
-    // this.completeToDo = this.completeToDo.bind(this);
-
-
-
 
   }
 
@@ -68,7 +64,8 @@ addItem(e){
     var newItem = {
         content: this._inputElement.value,
         id: Date.now(),
-        complete:"incomplete"
+        complete:"incomplete",
+        checkedStatus: false
     };
   
 
@@ -83,7 +80,6 @@ addItem(e){
 
   this._inputElement.value ="";
 }
-console.log(this.state.toDoList);
 
 e.preventDefault();
 
@@ -100,11 +96,11 @@ completeToDo = (id) => {
 
       if(toDo.complete === "incomplete")
 
-      return{...toDo, complete:"completed"}
+      return{...toDo, complete:"completed", checkedStatus:true}
 
       else if(toDo.complete === "completed")
 
-      return{...toDo, complete:"incomplete"}
+      return{...toDo, complete:"incomplete", checkedStatus:false}
       
     }
     
@@ -115,47 +111,15 @@ completeToDo = (id) => {
     toDoList: updateStatus
     
   });
-  console.log(this.state.toDoList);
+  
 }
-
-// DropDown status
-// toDoStatus = (status) =>{
-
-//   this.setState({completeStatus: status})
-//   console.log(this.state.completeStatus);
-
-//  const updatedTodos = this.state.toDoList.filter((todo) => {
-
-
-//   if (this.state.completeStatus === "completed"){
-    
-//     return todo.complete = (true)
-//   }
-
-//   else if (this.state.completeStatus === "incomplete"){
-    
-//     return todo = !todo.complete}
-
-
-//   else {return todo};
-// });
-
-// console.log(updatedTodos)
-// this.setState({
-//   filteredToDo: updatedTodos
-// });
-
-
-// }
-
-
 
 
   render(){
 
     // filter based on search field
 
-    const { toDoList, searchField, filteredToDo, completeStatus} = this.state;
+    const { toDoList, searchField, completeStatus} = this.state;
 
     
 
@@ -187,18 +151,10 @@ completeToDo = (id) => {
     
   
     return (
-      <div className="App">
-        <h1>To-Do List Generator</h1>
-        <SearchBox
-          placeholder="Find to-do items"
-          handleChange = {e => this.setState({searchField: e.target.value})}
-
-        ></SearchBox>
-
-      <DropDown
-      // handleChange={this.toDoStatus}
-      handleChange={e => this.setState({completeStatus: e.target.value})}
-      />
+      <div className="App" >
+        
+        <h1 id="app-name">To-Do List Generator</h1>
+        
       
     <form onSubmit={this.addItem}>
         <input 
@@ -211,9 +167,18 @@ completeToDo = (id) => {
         <button type="submit"  className="submit"><i className = "fas fa-plus"></i></button>
     </form>
     
-    
+    <SearchBox
+        
+          placeholder={'Find to-do items'}
+          handleChange = {e => this.setState({searchField: e.target.value})}
+
+    ></SearchBox>
+
+    <DropDown
+      handleChange={e => this.setState({completeStatus: e.target.value})}
+    />
       
-      <ToDoCards toDoList = {searchFilter} onDelete = {this.deleteTodo} onComplete={this.completeToDo}></ToDoCards>
+    <ToDoCards toDoList = {searchFilter} onDelete = {this.deleteTodo} onComplete={this.completeToDo}></ToDoCards>
       
 
       </div>

@@ -7,4 +7,10 @@
     line-height: 30px;
     margin-bottom: 30px;
     margin-left: 20px;
+
+    font-family: 'Bebas Neue',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+    font-size: 18px;
 }
