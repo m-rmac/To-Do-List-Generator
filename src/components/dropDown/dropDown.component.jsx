@@ -13,3 +13,5 @@ export const DropDown = ({handleChange}) => (
     </select>
 
 )
+
+// e => handleChange(e.target.value)

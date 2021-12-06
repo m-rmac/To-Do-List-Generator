@@ -1,4 +1,4 @@
-.card-container {
+.incomplete {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -10,6 +10,22 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+  }
+
+  .completed{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+    opacity: 0.8;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    text-decoration: line-through;
   }
   
   .card-container:hover {

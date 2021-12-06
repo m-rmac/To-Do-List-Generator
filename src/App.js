@@ -18,19 +18,19 @@ class App extends Component {
         {
           "id":1,
           "content": "Complete To-do list application",
-          "complete": false
+          "complete": "incomplete"
         },
 
         {
           "id":2,
           "content": "File taxes",
-          "complete": false
+          "complete": "incomplete"
         }
       ],
 
       searchField: '',
 
-      filteredToDo: this.toDoList,
+      filteredToDo: [],
 
       completeStatus: "all"
     }
@@ -68,7 +68,7 @@ addItem(e){
     var newItem = {
         content: this._inputElement.value,
         id: Date.now(),
-        complete:false
+        complete:"incomplete"
     };
   
 
@@ -94,42 +94,59 @@ e.preventDefault();
 completeToDo = (id) => {
 
   const updateStatus = this.state.toDoList.map((toDo) => {
-    console.log(toDo.complete);
+    
 
     if(id === toDo.id){
-      return{...toDo, complete:!toDo.complete}
+
+      if(toDo.complete === "incomplete")
+
+      return{...toDo, complete:"completed"}
+
+      else if(toDo.complete === "completed")
+
+      return{...toDo, complete:"incomplete"}
       
     }
+    
     return toDo;
   });
 
   this.setState({
     toDoList: updateStatus
+    
   });
+  console.log(this.state.toDoList);
 }
 
 // DropDown status
-toDoStatus = () =>{
+// toDoStatus = (status) =>{
+
+//   this.setState({completeStatus: status})
+//   console.log(this.state.completeStatus);
+
+//  const updatedTodos = this.state.toDoList.filter((todo) => {
 
 
- const updatedTodos = this.state.toDoList.filter((todo) => {
+//   if (this.state.completeStatus === "completed"){
+    
+//     return todo.complete = (true)
+//   }
+
+//   else if (this.state.completeStatus === "incomplete"){
+    
+//     return todo = !todo.complete}
 
 
-  if (this.state.completeStatus === "completed")
-    return todo.complete === true
+//   else {return todo};
+// });
 
-  if (this.state.completeStatus === "incomplete")
-    return todo.complete === false
-
-  return todo;
-});
-
-this.setState({
-  filteredToDo: updatedTodos
-});
+// console.log(updatedTodos)
+// this.setState({
+//   filteredToDo: updatedTodos
+// });
 
 
-}
+// }
 
 
 
@@ -138,15 +155,36 @@ this.setState({
 
     // filter based on search field
 
-    // this.toDoStatus();
+    const { toDoList, searchField, filteredToDo, completeStatus} = this.state;
 
-    const { toDoList, searchField} = this.state;
-    const searchFilter = toDoList.filter(toDo =>
+    
+
+    var searchFilter = [];
+
+    searchFilter = toDoList.filter(toDo =>
       toDo.content.toLowerCase().includes(searchField.toLowerCase())
-      )
       
-      
+      );
 
+
+      if (completeStatus === "completed"){
+        
+        searchFilter = searchFilter.filter(toDo =>
+          toDo.complete.match("completed")
+          
+          );
+      }
+    
+      if (completeStatus === "incomplete"){
+        searchFilter = searchFilter.filter(toDo =>
+          toDo.complete.match("incomplete")
+          
+          )
+      }
+    
+    
+      
+    
   
     return (
       <div className="App">
@@ -158,6 +196,7 @@ this.setState({
         ></SearchBox>
 
       <DropDown
+      // handleChange={this.toDoStatus}
       handleChange={e => this.setState({completeStatus: e.target.value})}
       />
       
@@ -171,7 +210,8 @@ this.setState({
 
         <button type="submit"  className="submit"><i className = "fas fa-plus"></i></button>
     </form>
-             
+    
+    
       
       <ToDoCards toDoList = {searchFilter} onDelete = {this.deleteTodo} onComplete={this.completeToDo}></ToDoCards>
       

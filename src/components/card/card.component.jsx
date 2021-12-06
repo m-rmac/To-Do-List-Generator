@@ -4,7 +4,7 @@ import "../../components/card/card.style.css";
 
 export const Card = ({toDo, onDelete, onComplete}) => (
 
-    <div className = "card-container">
+    <div className = {toDo.complete}>
 
         <p>{toDo.content}</p>
         <input  className="complete" 
