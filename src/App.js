@@ -155,7 +155,7 @@ completeToDo = (id) => {
         
         <h1 id="app-name">To-Do List Generator</h1>
         
-      
+     
     <form onSubmit={this.addItem}>
         <input 
         className="newItem"
@@ -167,9 +167,10 @@ completeToDo = (id) => {
         <button type="submit"  className="submit"><i className = "fas fa-plus"></i></button>
     </form>
     
+
     <SearchBox
         
-          placeholder={'Find to-do items'}
+          placeholder={'Search to-do items'}
           handleChange = {e => this.setState({searchField: e.target.value})}
 
     ></SearchBox>

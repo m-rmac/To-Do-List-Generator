@@ -5,11 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: linear-gradient(
-    to left,
-    rgb(45, 178, 255) 0%,
-    rgb(55, 235, 196) 100%
-  ); */
+  
   background-image: url('./photos/annie-pink.jpg');
 }
 

@@ -1,9 +1,10 @@
 .search {
+  
     -webkit-appearance: none;
     border: none;
     outline: none;
     padding: 10px;
-    width: 250px;
+    width: 400px;
     line-height: 30px;
     margin-bottom: 30px;
 
@@ -12,6 +13,6 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     font-size: 18px;
-    
+    /* border: 1px solid grey; */
   }
   

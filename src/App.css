@@ -47,11 +47,14 @@
   line-height: 30px;
   margin-bottom: 30px;
 
+  height: 30px;
+
   font-family: 'Bebas Neue',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 
     font-size: 20px;
+    /* border: 1px solid grey; */
   
 }
 
@@ -64,6 +67,9 @@
   line-height: 30px;
   margin-bottom: 30px;
   cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  
 }
 
 .submit:hover{
@@ -73,3 +79,5 @@
 #app-name{
   font-size: 100px;
 }
+
+
