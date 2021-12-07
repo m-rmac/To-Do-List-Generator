@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "//m-rmac.github.io/To-Do-List-Generator/static/css/main.77456579.chunk.css",
+    "main.js": "//m-rmac.github.io/To-Do-List-Generator/static/js/main.32c907b5.chunk.js",
+    "main.js.map": "//m-rmac.github.io/To-Do-List-Generator/static/js/main.32c907b5.chunk.js.map",
+    "runtime-main.js": "//m-rmac.github.io/To-Do-List-Generator/static/js/runtime-main.6b80ffb0.js",
+    "runtime-main.js.map": "//m-rmac.github.io/To-Do-List-Generator/static/js/runtime-main.6b80ffb0.js.map",
+    "static/js/2.e4a86aab.chunk.js": "//m-rmac.github.io/To-Do-List-Generator/static/js/2.e4a86aab.chunk.js",
+    "static/js/2.e4a86aab.chunk.js.map": "//m-rmac.github.io/To-Do-List-Generator/static/js/2.e4a86aab.chunk.js.map",
+    "static/js/3.7b47e908.chunk.js": "//m-rmac.github.io/To-Do-List-Generator/static/js/3.7b47e908.chunk.js",
+    "static/js/3.7b47e908.chunk.js.map": "//m-rmac.github.io/To-Do-List-Generator/static/js/3.7b47e908.chunk.js.map",
+    "index.html": "//m-rmac.github.io/To-Do-List-Generator/index.html",
+    "static/css/main.77456579.chunk.css.map": "//m-rmac.github.io/To-Do-List-Generator/static/css/main.77456579.chunk.css.map",
+    "static/js/2.e4a86aab.chunk.js.LICENSE.txt": "//m-rmac.github.io/To-Do-List-Generator/static/js/2.e4a86aab.chunk.js.LICENSE.txt",
+    "static/media/index.css": "//m-rmac.github.io/To-Do-List-Generator/static/media/annie-pink.29fe0f1e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b80ffb0.js",
+    "static/js/2.e4a86aab.chunk.js",
+    "static/css/main.77456579.chunk.css",
+    "static/js/main.32c907b5.chunk.js"
+  ]
+}
