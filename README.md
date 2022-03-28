@@ -1,17 +1,20 @@
-# To-Do List Generator with Create React App
+# To-Do List Generator
 
-A quick project to play around with the new concepts I have been learning with React.
+An application for users to add todo tasks and complete or delete as required. Features todo serachbar and dropdown filters that enable users search for tasks by content or completion status. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Lessons Learned
-
-My first React project, 
-
 
 ## Depolyment
 
 Deployed with [github pages](https://m-rmac.github.io/To-Do-List-Generator/)
+
+## Areas of Development
+
+
+## Potential Future Features 
+
+- Enable users to store past completed tasks
+- Automatic addition of set tasks every 24 hours.  
 
 ## Get started
 From your command line, first clone this repo:
